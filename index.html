@@ -15,7 +15,7 @@
 
 <!-- Header -->
 <header>
-  <div class="container">
+  <div class="container header">
     <div class="row">
       <h1> SpaceX Launches </h1>
     </div>
@@ -27,22 +27,22 @@
 
 
 <!-- Next Launch -->
-<div class="container">
+<div class="container launch">
   <div class="row">
 
-     <div class="col-sm-12 col-md-6 col-lg-6">
-       <div class="launch next-launch next-launch-info">
-          <h1>NEXT LAUNCH</h1>
-          <h2>Falcon 9 - CRS 15</h2>
-          <h3>June 28</h3>
+     <div class="col-sm-12 col-md-6 col-lg-6 col-sm-push-12">
+       <div class="launch-info next-launch next-launch-info">
+          <h1>Next Launch</h1>
+          <h2>Falcon 9 <span> CRS 15</span></h2>
+          <h3>JUNE 28</h3>
           <h4>6.03 a.m. (1003 GMT)</h4>
           <a class="main-btn" title="Save the date" href="#"> Save the date </a>
        </div>
      </div>
 
-    <div class="col-sm-12 col-md-6 col-lg-6">
-      <div class="launch next-launch next-launch-photo">
-        <img src="images/800x800-falcon-9.jpg" alt="SpaceX next launch">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-sm-pull-12">
+      <div class="launch-info next-launch next-launch-photo">
+        <img src="images/rocket.jpg" alt="SpaceX next launch">
       </div>
     </div>
 
@@ -51,40 +51,46 @@
 
 
 <!-- Upcoming and Previous Launches -->
-<div class="container">
+<div class="container launch">
   <div class="row">
 
   <div class="col-sm-12 col-md-6 col-lg-6">
-    <div class="launch launches upcoming-launches">
+    <div class="launch-info launches upcoming-launches">
       <h1>Upcoming launches</h1>
-      <h2>Mission  Rocket  Date</h2>
-      <h2>Mission  Rocket  Date</h2>
-      <h2>Mission  Rocket  Date</h2>
-      <h2>Mission  Rocket  Date</h2>
-      <h2>Mission  Rocket  Date</h2>
+      <ul class="launches-ul">
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+      </ul>
+      <a class="all-launches" title="See all upcoming launches" href="#"> See all upcoming launches </a>
     </div>
   </div>
 
   <div class="col-sm-12 col-md-6 col-lg-6">
-    <div class="launch launches previous-launches">
+    <div class="launch-info launches previous-launches">
       <h1>Previous launches</h1>
-      <h2>Mission  Rocket  Date</h2>
-      <h2>Mission  Rocket  Date</h2>
-      <h2>Mission  Rocket  Date</h2>
-      <h2>Mission  Rocket  Date</h2>
-      <h2>Mission  Rocket  Date</h2>
+      <ul class="launches-ul">
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+          <li> <span> Mission </span> <span> Rocket </span> <span> Date </span> </li>
+      </ul>
+      <a class="all-launches" title="See all previous launches" href="#"> See all previous launches </a>
     </div>
   </div>
 
   </div>
 </div>
 
-<!-- Facts-->
-<div class="container">
+<!-- Facts Launch-->
+<div class="container launch">
   <div class="row">
 
     <div class="col-sm-12 col-md-12 col-lg-12">
-      <div class="launch launch-facts did-you-know">
+      <div class="launch-info launch-facts did-you-know">
         <h1>Did you know?</h1>
         <h2>61</h2>
         <p>SpaceX has launched 61 rockets since 2006</p>
@@ -92,7 +98,7 @@
     </div>
 
     <div class="col-sm-12 col-md-16 col-lg-6">
-      <div class="launch launch-facts fun-facts">
+      <div class="launch-info launch-facts fun-facts">
         <h1>18</h1>
         <p>Succesful launches in 2017</p>
       </div>
@@ -100,7 +106,7 @@
 
 
     <div class="col-sm-12 col-md-16 col-lg-6">
-      <div class="launch launch-facts fun-facts">
+      <div class="launch-info launch-facts fun-facts">
         <h1>21</h1>
         <p>Lorem ipsum dolor sit amet</p>
       </div>
@@ -110,16 +116,71 @@
 </div>
 
 
+
+<!-- Rockets Launch-->
+<div class="container launch rockets">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="launch-info rockets">
+      <h1> Rockets </h1>
+  </div>
+</div>
+
+<div class="container launch">
+  <div class="row">
+
+    <div class="col-sm-12 col-md-12 col-lg-3">
+      <div class="launch-info rockets-launch falcon-1">
+        <ul class="rockets-ul falcon-1-ul">
+            <li> <h2> Falcon 1 </h2> </ul>
+            <li> <span> First Launch: </span> <span> Date </span> <span> </li>
+            <li> <span> Last Launch: </span> <span> Date </span> <span> </li>
+            <li> <span> Total: </span> <span> Number </span> </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-3">
+      <div class="launch-info rockets-launch falcon-9">
+        <ul class="rockets-ul falcon-9-ul">
+            <li> <h2> Falcon 9 </h2> </ul>
+            <li> <span> First Launch: </span> <span> Date </span> <span> </li>
+            <li> <span> Last Launch: </span> <span> Date </span> <span> </li>
+            <li> <span> Total: </span> <span> Number </span> </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-3">
+      <div class="launch-info rockets-launch falcon-heavy">
+        <ul class="rockets-ul falcon-heavy-ul">
+            <li> <h2> Falcon Heavy </h2> </ul>
+            <li> <span> First Launch: </span> <span> Date </span> <span> </li>
+            <li> <span> Last Launch: </span> <span> Date </span> <span> </li>
+            <li> <span> Total: </span> <span> Number </span> </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
 <!-- Footer -->
 
 <footer>
-  <div class="container">
+  <div class="container footer">
     <div class="row">
       <h1> Footer </h1>
     </div>
   </div>
 </footer>
-
 
 
 
