@@ -11,39 +11,51 @@
 
 
 <body class="home">
-<div id="page">
+<div id="home">
 
 <!-- Header -->
 <header>
   <div class="container header">
    <div class="row">
+     <div class="col-sm-6">
      <a class="logo" href="index.html"></a>
+    </div>
+    <div class="col-sm-6">
+      <nav>
+            <ul class="hamburger-icon" onclick="toggleNavigation(this)">
+              <li class="bar1">
+              </li>
+              <li class="bar2">
+              </li>
+              <li class="bar3">
+              </li>
+           </ul>
+      </nav>
+    </div>
    </div>
   </div>
+
 </header>
 
+<nav id="menu" class="menu active">
+  <div class="container menu-container">
+    <div class="row">
+      <div class="col-sm-12">
+        <ul>
+          <li><h1>Hello world</h1></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
 <!-- Nav -->
-<!--  </div>
-      <ul>
-        <li>
-          <a title="Next Launch" href="next-launch.html" aria-haspopup="true"> Next Launch</a>
-        </li>
-        <li>
-          <a title="Upcoming Launches" href="upcoming-launches.html" aria-haspopup="true"> Upcoming Launches</a>
-        </li>
-        <li>
-          <a title="Previous Launches" href="previous-launches.html" aria-haspopup="true"> Previous Launches</a>
-        </li>
-        <li>
-          <a title="Contact" href="young-scientists.html" aria-haspopup="true"> Contact</a>
-        </li>
-     </ul>
-</nav>-->
+
+
 
 
 
 <!-- Next Launch -->
-<div class="container launch">
+<section class="container launch">
   <div class="row">
 
      <div class="col-sm-12 col-md-6 col-lg-6 col-sm-push-12">
@@ -63,11 +75,11 @@
     </div>
 
   </div>
-</div>
+</section>
 
 
 <!-- Upcoming and Previous Launches -->
-<div class="container launch">
+<section class="container launch">
   <div class="row">
 
   <div class="col-sm-12 col-md-6 col-lg-6">
@@ -97,10 +109,10 @@
   </div>
 
   </div>
-</div>
+</section>
 
 <!-- Facts Launch-->
-<div class="container launch">
+<section class="container launch">
   <div class="row">
 
     <div class="col-sm-12 col-md-12 col-lg-12">
@@ -127,22 +139,21 @@
     </div>
 
   </div>
-</div>
+</section>
 
 
 
 <!-- Rockets Launch-->
-<div class="container launch rockets">
+<section class="container launch rockets">
+
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12">
-    <div class="launch-info rockets">
-      <h1> Rockets </h1>
-  </div>
-</div>
+      <div class="launch-info rockets">
+        <h1> Rockets </h1>
+      </div>
+    </div>
 
-<div class="container launch">
-  <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-3">
+    <div class="col-sm-12 col-md-12 col-lg-4">
       <div class="launch-info rockets-launch falcon-1">
         <ul class="rockets-ul falcon-1-ul">
             <li> <h2> Falcon 1 </h2> </ul>
@@ -153,7 +164,7 @@
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-12 col-lg-3">
+    <div class="col-sm-12 col-md-12 col-lg-4">
       <div class="launch-info rockets-launch falcon-9">
         <ul class="rockets-ul falcon-9-ul">
             <li> <h2> Falcon 9 </h2> </ul>
@@ -164,7 +175,7 @@
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-12 col-lg-3">
+    <div class="col-sm-12 col-md-12 col-lg-4">
       <div class="launch-info rockets-launch falcon-heavy">
         <ul class="rockets-ul falcon-heavy-ul">
             <li> <h2> Falcon Heavy </h2> </ul>
@@ -177,7 +188,7 @@
 
 
   </div>
-</div>
+</section>
 
 
 

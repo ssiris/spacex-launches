@@ -1,4 +1,5 @@
-@import 'footer.css';
 @import 'header.css';
 @import 'global.css';
+@import 'nav.css';
 @import 'home.css';
+@import 'footer.css';

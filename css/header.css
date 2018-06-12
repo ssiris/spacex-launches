@@ -1,12 +1,11 @@
 header {
   position: relative;
+  z-index:2;
 }
 
 header {
 height: 100px;
 width: auto;
-background-color: black;
-
 }
 
 header a.logo {
