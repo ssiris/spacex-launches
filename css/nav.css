@@ -1,6 +1,10 @@
+nav {
+  margin-top: 30px;
+  }
+
 .menu {
-  display: none;
-  background-color: pink;
+  opacity:0;
+  background-color: black;
   color:black;
   position:absolute;
   top:0;
@@ -8,6 +12,7 @@
   left:0;
   right:0;
   z-index:1;
+  transition: all .5s ease;
 }
 
 .menu-container {
@@ -15,11 +20,17 @@
 }
 
 .menu.active {
-  display: block;
-
+  opacity:1;
 }
 
-/* Menu  */
+.menu li a{
+  color:white;
+  padding: .3em;
+  font-size: 2em;
+}
+
+
+/* Hamburger icon */
 /* credits: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js */
 
 .hamburger-icon {
@@ -28,9 +39,9 @@
 }
 
 .bar1, .bar2, .bar3 {
-    width: 35px;
+    width: 50px;
     height: 5px;
-    background-color: #333;
+    background-color: grey;
     margin: 6px 0;
     transition: 0.4s;
 }
