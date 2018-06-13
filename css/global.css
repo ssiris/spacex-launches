@@ -60,11 +60,27 @@ a.main-btn {
 }
 
 .align-center {
-  text-align:center;
+  text-align: center;
 }
 
 
 .bg-blue {
   background-color: #10337F;
   color: white;
+}
+
+/*  Page Launch list  */
+.page-list ul  {
+  margin-bottom: 20px;
+}
+
+.page-list span {
+  font-size: 2em;
+}
+
+
+.page-list li{
+  padding-top: 20px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid white;
 }

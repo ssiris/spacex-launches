@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="Contact us. If you have a question regarding
-SpaceX next launch, SpaceX upcoming launches or SpaceX previous launches, please use our contact form.">
+  <meta name="description" content="Contact us. If you want to contact us regarding
+SpaceX next launch, SpaceX upcoming launches or SpaceX previous launches,
+or have other questions related to SpaceX launches, please use our contact form.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | SpaceX Launches - Save the date for next launch </title>
@@ -41,7 +42,8 @@ SpaceX next launch, SpaceX upcoming launches or SpaceX previous launches, please
 </header>
 
 <!-- Nav -->
-<nav id="menu" class="menu active">
+
+<nav id="menu" class="menu">
   <div class="container menu-container">
     <div class="row">
       <div class="col-sm-12">
@@ -54,3 +56,59 @@ SpaceX next launch, SpaceX upcoming launches or SpaceX previous launches, please
     </div>
   </div>
 </nav>
+
+
+<!-- Form with validation -->
+
+<section class="container contact-form">
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Contact us</h1>
+    </div>
+
+    <div class="col-sm-12">
+      <form class="form" name="form">
+        <fieldset>
+          <legend>Contact form</legend>
+            <label for="name">Name:<span id="name-message" style="color:red;"></span></label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">E-mail:<span id="email-message" style="color:red;"></span></label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="message">Leave a short message</label><span id="message-message" style="color:red;"></span></label><br>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="button" name="button" onclick="validateForm()">Submit</button>
+            <label for="button"><span id="success-message" style="color:green;"></span></label>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+  <div class="container footer">
+    <div class="row">
+      <h1> Footer </h1>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

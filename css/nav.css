@@ -13,6 +13,7 @@ nav {
   right:0;
   z-index:1;
   transition: all .5s ease;
+  pointer-events: none;
 }
 
 .menu-container {
@@ -21,6 +22,7 @@ nav {
 
 .menu.active {
   opacity:1;
+  pointer-events: auto;
 }
 
 .menu li a{
