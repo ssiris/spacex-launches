@@ -1,4 +1,3 @@
-
 // Navigation Toggle
 function toggleNavigation(x) {
     var menu = document.getElementById('menu');
@@ -8,8 +7,6 @@ function toggleNavigation(x) {
 
 
 // Form Validation
-
-
 var validateForm = function () {
   var form = document.forms["form"];
   var success = document.getElementById('success-message');
@@ -66,6 +63,5 @@ var validateForm = function () {
   if (name_status && email_status && message_status) {
     success.innerHTML = "<br>Message has been sent!";
   }
-
 
 }
