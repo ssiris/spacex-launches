@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Roboto:300');
+
 
 body {
   background-color: black;
   color:white;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Merriweather', serif;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -14,21 +13,21 @@ img {
 }
 
 h1 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 2.5em;
+
 
 }
 
 h2, h3, h4 {
-  font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.9em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
 }
 
 p, ul, li, a, span{
-  font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-size: 1em;
 }
 
@@ -47,8 +46,6 @@ a.main-btn {
   background-color: #bc2222;
   color: white;
   font-size: 1.8em;
-  font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
   padding: 10px 50px;
   border: 0.4px solid grey;
   border-radius: 20px;
@@ -64,8 +61,8 @@ a.main-btn {
 }
 
 
-.bg-blue {
-  background-color: #10337F;
+.bg-lightblack {
+  background-color: #0c0c0c;
   color: white;
 }
 
@@ -80,7 +77,14 @@ a.main-btn {
 
 
 .page-list li{
-  padding-top: 20px;
-  padding-bottom: 1px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
   border-bottom: 1px solid white;
+}
+
+.lato-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+
 }

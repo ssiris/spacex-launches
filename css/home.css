@@ -1,5 +1,6 @@
 .index-container {
   margin-bottom: 70px;
+  margin-top: 20px;
 }
 
 
@@ -21,21 +22,19 @@
 
 .index-next-launch-info h1 {
   color: #2269FF;
-  font-size: 5.5em;
-  margin-bottom: 10px;
+  font-size: 6em;
+  margin-bottom: 20px;
 }
 
 .index-next-launch-info h2 {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 2.2em;
-  margin-bottom: 15px;
-  margin-top: 20px;
+  font-size: 3.5em;
+  margin-bottom: 20px;
+
 }
 
 .index-next-launch-info h3 {
-  font-size: 4.5em;
-  margin-bottom: 5px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .index-next-launch-info h4 {
@@ -45,7 +44,6 @@
 
 .index-next-launch-info span {
   font-size:0.6em;
-  font-family: 'Open Sans', sans-serif;
   padding-left: 10px;
 }
 
@@ -69,9 +67,10 @@
 
 
 a.link-all-launches{
-  color: red;
+  color: blue;
   font-size: 1.875em;
   margin-top:10px;
+  padding-top: 100px;
 }
 
 /*  Facts Launch   */
@@ -85,8 +84,6 @@ a.link-all-launches{
 }
 
 .index-launch-facts span{
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
   font-size: 12em;
 }
 
@@ -106,8 +103,6 @@ a.link-all-launches{
 }
 
 .index-rockets h2 {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
   font-size: 2em;
 }
 
