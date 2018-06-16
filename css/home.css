@@ -15,8 +15,6 @@
 
 .index-next-launch-info {
   text-align: center;
-  margin-bottom: 10px;
-  height: 600px;
   padding: 50px 2px;
 }
 
@@ -56,6 +54,11 @@
 }
 
 
+@media (max-width:769px) {
+
+}
+
+
 /*  Home Upcoming and previous launches */
 
 .index-all-launches h1{
@@ -67,10 +70,10 @@
 
 
 a.link-all-launches{
-  color: blue;
-  font-size: 1.875em;
-  margin-top:10px;
-  padding-top: 100px;
+  color: #2269FF;
+  font-size: 1.5em;
+  margin:25px 0;
+  display:block;
 }
 
 /*  Facts Launch   */
@@ -108,4 +111,28 @@ a.link-all-launches{
 
 .index-rockets {
   padding: 30px;
+}
+
+.featured-image-mobile {
+  display: block;
+}
+
+.featured-image {
+  display: none;
+}
+
+.featured-bg-image {
+  background-image: url('../images/rocket.jpg');
+  background-size: cover;
+  width:100%;
+  height:100%;
+}
+
+@media (min-width:768px) {
+  .featured-image-mobile {
+    display: none;
+  }
+  .featured-image {
+    display: block;
+  }
 }

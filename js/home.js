@@ -26,7 +26,7 @@ var getUpcomingLaunches = function () {
         data.forEach(launch => {
           if(counter <= 2) {
             var date = new Date(launch.launch_date_utc);
-            list.innerHTML = list.innerHTML + '<li><a href="launch.html?id=' + launch.flight_number + '"><span>' + launch.mission_name + '</span><span>' + launch.rocket.rocket_name + '</span><span>' + date + '</span></a></li>';
+            list.innerHTML = list.innerHTML + '<li><a href="launch.html?id=' + launch.flight_number + '"><span>' + launch.mission_name + '</span><span>' + launch.rocket.rocket_name + '</span><span>' + date.toLocaleDateString() + '</span></a></li>';
           }
           counter++;
         });
@@ -61,12 +61,10 @@ var getPreviousLaunches = function () {
         let list = document.getElementById('previous-launch-list');
         var counter = 0;
 
-            console.log(data);
-
         data.forEach(launch => {
           if(counter <= 2) {
             var date = new Date(launch.launch_date_utc);
-            list.innerHTML = list.innerHTML + '<li><a href="launch.html?id=' + launch.flight_number + '"><span>' + launch.mission_name + '</span><span>' + launch.rocket.rocket_name + '</span><span>' + date + '</span></a></li>';
+            list.innerHTML = list.innerHTML + '<li><a href="launch.html?id=' + launch.flight_number + '"><span>' + launch.mission_name + '</span><span>' + launch.rocket.rocket_name + '</span><span>' + date.toLocaleDateString() + '</span></a></li>';
           }
           counter++;
         });
