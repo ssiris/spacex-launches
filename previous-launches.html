@@ -61,19 +61,24 @@
 
 
     <!-- Previous Launches -->
-  <section class="container">
-      <div class="row">
-        <div class="col-sm-12">
-            <h1>Previous Launches</h1>
+    <section class="container margin-top">
+        <div class="row">
+          <div class="col-sm-12">
+              <h1>Previous Launches</h1>
+              <p>✅ = Successful launch</p>
+              <br>
+          </div>
+          <div class="col-sm-12">
+             <ul id="previous-launch-list" class="page-list full-launch-list">
+                <li class="list-header"> <span class="short-item">Flight No.:</span><span>Mission:</span><span class="hide-mobile">Rocket:</span><span class="hide-mobile">Payload:</span><span>Date:</span></li>
+             </ul>
+          </div>
+          <div class="col-sm-12">
+            <br>
+            <a class="link-all-launches align-right" title="See all previous launches" href="upcoming-launches.html">Upcoming launches &rarr;</a>
+          </div>
         </div>
-      </div>
-
-        <div class="col-sm-12">
-           <ul class="page-list">
-              <li> <span id="prev-flight-number">Flight Number:</span><span id="prev-rocket-name">Rocket:</span><span id="prev-mission-name">Mission:</span><span id="prev-customer-name">Customer:</span><span id="prev-mission-payload">Payload:</span><span id="prev-launch-success">Launch Success:</span><span id="prev-time-date'">Date:</span></li>
-       </div>
-    </section>
-
+      </section>
 
 
 
@@ -96,6 +101,6 @@
   </div>
 
   <script src="js/script.js"></script>
-    <script src="js/upcomingAndPreviousLaunches.js"></script>
+    <script src="js/previousLaunches.js"></script>
   </body>
   </html>

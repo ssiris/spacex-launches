@@ -8,6 +8,10 @@ body {
   line-height: 1.6;
 }
 
+body.nav-active {
+  overflow:hidden;
+}
+
 img {
   width: 100%;
 }
@@ -44,6 +48,10 @@ a.main-btn {
 
 .margin-top {
   margin-top: 50px;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
 }
 
 .main-btn {
@@ -129,6 +137,26 @@ a.main-btn {
   width:12%;
 }
 
+.page-list.single-launch-data {
+  margin-bottom:50px;
+}
+
+.page-list.single-launch-data li span {
+  font-size: 18px;
+  color: #bbbbbb;
+}
+
+.page-list.single-launch-data li {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .page-list.single-launch-data li span, .page-list.single-launch-data li {
+    font-size:22px;
+  }
+}
+
+
 @media (max-width: 767.98px) {
   .page-list.full-launch-list li span, .page-list.short-launch-list li span {
     font-size: 18px;
@@ -148,9 +176,25 @@ span.hide-mobile{
   display: none !important;
 }
 
-@media (min-width:769px) {
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width:768px) {
   span.hide-mobile {
     display: inline-block !important;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
   }
 }
 

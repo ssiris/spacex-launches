@@ -3,6 +3,7 @@ function toggleNavigation(x) {
     var menu = document.getElementById('menu');
     x.classList.toggle("active");
     menu.classList.toggle("active");
+    document.body.classList.toggle("nav-active");
 }
 
 

@@ -28,7 +28,7 @@ var getUpcomingLaunches = function () {
             for (var i = 0; i < launch.rocket.second_stage.payloads.length; i++) {
               payload.push(launch.rocket.second_stage.payloads[i].payload_type);
             }
-            list.innerHTML = list.innerHTML + '<li><a href="launch.html?id=' + launch.flight_number + '"><span class="short-item">' + launch.flight_number + '</span><span>' + launch.mission_name + '</span><span class="hide-mobile">' + launch.rocket.rocket_name + '</span><span class="hide-mobile">' + payload + '</span><span>' + date.toLocaleDateString() + '</span></a></li>';
+            list.innerHTML = list.innerHTML + '<li><a href="launch.html?id=' + launch.flight_number + '"><span class="short-item">#' + launch.flight_number + '</span><span>' + launch.mission_name + '</span><span class="hide-mobile">' + launch.rocket.rocket_name + '</span><span class="hide-mobile">' + payload + '</span><span>' + date.toLocaleDateString() + '</span></a></li>';
         });
 
     }

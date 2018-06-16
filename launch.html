@@ -61,41 +61,46 @@
 
 
 <!-- Launch -->
-<section class="container">
+<section class="container margin-top">
   <div class="row">
 
-    <div class="col-sm-12 col-md-6 col-lg-6">
-      <h1> <span id="flight-number"> 1 </span> <span id="rocket-name"> Rocket </span> <span id="mission-name"> Mission </span> </h1> <!--flight number-->
-        <ul class="page-list">
-           <li> Details: <span id="launch-details"> </span> </li>
-           <li> Date: <span id="time-date"> </span> </li>
-           <li> Site: <span id="site-name"> </span> </li>
-           <li> Launch Success: <span id="launch-success"> </span> </li>
-           <li> Customer: <span id="customer-name"> </span> </li>
-           <li> Payload: <span id="mission-payload"> </span> </li>
-           <li> Payload Weight: <span id="payload-weight"> </span> kg </li>
-           <li> Orbit: <span id="launch-orbit"> </span> </li>
-           <li> Reuse: <span id="launch-reuse"> </span> </li>
-        </ul>
-
+    <div id="mission-patch-mobile" class="col-sm-12 col-md-5 mobile-only margin-bottom">
+       <img  src="images/patch-placeholder.svg" alt="Launch Mission Patch">
     </div>
 
-    <div id="mission-patch" class="col-sm-12 col-md-6 col-lg-6">
-       <img  src="https://images2.imgbox.com/44/ba/fvMeODet_o.png" alt="Launch Mission Patch">
+    <div class="col-sm-12 col-md-7">
+      <h1> <span id="flight-number"> 1 </span> <span id="mission-name"> Mission </span> </h1> <!--flight number-->
+        <ul class="page-list single-launch-data">
+           <li>Details: <span id="launch-details"></span></li>
+           <li>Rocket: <span id="rocket-name"></span></li>
+           <li>Date/time: <span id="time-date"></span></li>
+           <li>Site: <span id="site-name"></span></li>
+           <li>Launch Success: <span id="launch-success"></span></li>
+           <div id="payload">
+
+          </div>
+           <li>Reuse: <span id="launch-reuse"></span></li>
+        </ul>
+    </div>
+
+    <div id="mission-patch" class="col-sm-12 col-md-5 desktop-only">
+       <img  src="images/patch-placeholder.svg" alt="Launch Mission Patch">
     </div>
 
   </div>
 </section>
 
 
-<section class="container">
+<section class="container margin-top">
   <div class="row">
+    <div class="col-sm-12">
     <h2>More about this launch on other websites</h2>
-    <ul class="page-list">
-       <li> Flight club: <span id="flight-club"> </span> </li>
-       <li> Youtube: <span id="youtube-link"> </span> </li>
-       <li> Wikipedia: <span id="wiki-link"> </span> </li>
+    <ul class="page-list single-launch-data">
+       <li id="flight-club"></li>
+       <li id="youtube-link"></li>
+       <li id="wiki-link"></li>
     </ul>
+  </h2>
 
 
   </div>
