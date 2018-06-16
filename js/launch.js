@@ -38,7 +38,47 @@ var getSingleLaunch = function () {
 
         let rocketName = document.getElementById('rocket-name');
         rocketName.innerHTML = launch.rocket.rocket_name;
-        console.log(launch.rocket_name);
+
+        let launchDetails = document.getElementById('launch-details');
+        launchDetails.innerHTML = launch.details;
+        console.log(launch.details);
+
+        let launchDate = document.getElementById('time-date');
+        launchDate.innerHTML = launch.launch_date_utc;
+
+        let siteName = document.getElementById('site-name');
+        siteName.innerHTML = launch.launch_site.site_name_long;
+
+        let launchSuccess = document.getElementById('launch-success');
+        launchSuccess.innerHTML = launch.launch_success;
+
+        let customerName = document.getElementById('customer-name');
+        customerName.innerHTML = launch.rocket.second_stage.payloads[0].customers;
+
+        let missionPayload = document.getElementById('mission-payload');
+        missionPayload.innerHTML = launch.rocket.second_stage.payloads[0].payload_type;
+
+        let missionPayloadWeight = document.getElementById('payload-weight');
+        missionPayloadWeight.innerHTML = launch.rocket.second_stage.payloads[0].payload_mass_kg;
+
+        let launchOrbit = document.getElementById('launch-orbit');
+        launchOrbit.innerHTML = launch.rocket.second_stage.payloads[0].orbit;
+
+      // denne funker ikke så bra
+      //  let launchReuse = document.getElementById('launch-reuse');
+      //  launchReuse.innerHTML = launch.reuse;
+      //  if (launch.reuse)
+
+        let flightClub = document.getElementById('flight-club');
+        flightClub.innerHTML = launch.telemetry.flight_club;
+
+        let videoLink = document.getElementById('youtube-link');
+        videoLink.innerHTML = launch.links.video_link;
+
+        let wikiLink = document.getElementById('wiki-link');
+        wikiLink.innerHTML = launch.links.wikipedia;
+
+
 
         let patch = document.getElementById('mission-patch');
         // If mission has Patch, change placeholder patch with patch from API.

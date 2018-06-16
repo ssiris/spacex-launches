@@ -79,8 +79,49 @@ a.main-btn {
 .page-list li{
   padding-top: 15px;
   padding-bottom: 15px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255,255,255,0.65);
+}
+
+.page-list li.list-header span {
+    font-weight: 700;
+}
+
+
+.page-list.full-launch-list li a, .page-list.short-launch-list li a {
+  font-size:18px;
+  color: rgba(255,255,255,0.65);
+  display:block;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.page-list.full-launch-list li a:hover, .page-list.short-launch-list li a:hover {
+  color: white;
+}
+
+
+.page-list.short-launch-list li span {
+  font-size: 22px;
+  width:33.333%;
+  padding: 0 15px 0 0;
+  display:inline-block;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+.page-list.full-launch-list li span {
+  font-size: 22px;
+  width: 22%;
+  padding: 0 15px 0 0;
+  display:inline-block;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+.page-list.full-launch-list li span.short-item {
+  width:12%;
 }
 
 .lato-font {
