@@ -60,7 +60,7 @@ or have other questions related to SpaceX launches, please use our contact form.
 
 <!-- Form with validation -->
 
-<section class="container contact-form align-center">
+<section class="container contact-form margin-top">
 
 
   <div class="row">
@@ -68,15 +68,16 @@ or have other questions related to SpaceX launches, please use our contact form.
       <form class="form" name="form">
         <fieldset>
           <legend> <h1>Contact</h1></legend>
+            <p><span>Do you have any questions about SpaceX Launces?</span><br>Fill out the form and get in touch!</p>
             <label for="name">Name:<span id="name-message" style="color:red;"></span></label><br>
-            <input type="text" id="name" name="name"><br><br>
+            <input type="text" placeholder="Please fill out your name" id="name" name="name"><br><br>
 
             <label for="email">E-mail:<span id="email-message" style="color:red;"></span></label><br>
-            <input type="email" id="email" name="email"><br><br>
+            <input type="email" placeholder="Please fill out your e-mail" id="email" name="email"><br><br>
 
             <label for="message">Leave a short message</label><span id="message-message" style="color:red;"></span></label><br>
             <textarea id="message" name="message"></textarea>
-
+            <br>
             <button type="button" name="button" onclick="validateForm()">Submit</button>
             <label for="button"><span id="success-message" style="color:green;"></span></label>
         </fieldset>

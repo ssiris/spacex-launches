@@ -35,8 +35,35 @@ var getUpcomingLaunches = function () {
 }
 
 
-//PREVIOUS launches
+var getNextLaunch = function () {
+    var request = new XMLHttpRequest();
 
+    // Opening a new connecting using GET to request data from API endpoint.
+    request.open('GET', 'https://api.spacexdata.com/v2/launches/next', true);
+
+    request.onload = function () {
+        var data = JSON.parse(this.response);
+        if (request.status >= 200 && request.status < 400) {
+        getLaunch(data);
+        }
+        else {
+            console.log('error');
+        }
+    };
+
+    // Send request
+    request.send();
+
+    var getLaunch = function (data) {
+      var date = new Date(data.launch_date_utc);
+      document.getElementById('next-launch-rocket').innerHTML = data.rocket.rocket_name + '<br><span>' + data.mission_name + '</span>';
+      document.getElementById('next-launch-date').innerHTML = date.toLocaleString();
+      document.getElementById('next-launch-cta').innerHTML = '<a class="main-btn" title="Read more" href="launch.html?id=' + data.flight_number + '">Read more</a>';
+    }
+}
+
+
+//PREVIOUS launches
 var getPreviousLaunches = function () {
     var request = new XMLHttpRequest();
 
@@ -48,6 +75,7 @@ var getPreviousLaunches = function () {
         if (request.status >= 200 && request.status < 400) {
         getLaunches(data);
         getRocketStats(data);
+        getFunFacts(data);
         }
         else {
             console.log('error');
@@ -62,13 +90,36 @@ var getPreviousLaunches = function () {
         let list = document.getElementById('previous-launch-list');
         var counter = 0;
 
-        data.forEach(launch => {
+        data.reverse().forEach(launch => {
           if(counter <= 2) {
             var date = new Date(launch.launch_date_utc);
             list.innerHTML = list.innerHTML + '<li><a href="launch.html?id=' + launch.flight_number + '"><span>' + launch.mission_name + '</span><span>' + launch.rocket.rocket_name + '</span><span>' + date.toLocaleDateString() + '</span></a></li>';
           }
           counter++;
         });
+
+    }
+
+    var getFunFacts = function(data) {
+      var thisYear = new Date();
+      var lastYear = thisYear.getFullYear()-1;
+      var totalLaunches = data.length;
+      var totalLaunchesLastYear = 0;
+      var totalLaunchesThisYear = 0;
+      data.forEach(launch => {
+        var y = new Date(launch.launch_date_utc);
+        if (y.getFullYear() == lastYear) {
+          totalLaunchesLastYear++;
+        }
+        if (y.getFullYear() == thisYear.getFullYear()) {
+          totalLaunchesThisYear++;
+        }
+      });
+
+      document.getElementById('this-year').innerHTML = totalLaunchesThisYear;
+      document.getElementById('last-year').innerHTML = totalLaunchesLastYear;
+      document.getElementById('total-rockets').innerHTML = totalLaunches;
+
 
     }
 
@@ -86,6 +137,7 @@ var getPreviousLaunches = function () {
         else if (launch.rocket.rocket_id === "falconheavy") {
           falconHeavy.push(launch);
         }
+
       });
 
       var oneFirst = falconOnes[0];
@@ -132,5 +184,6 @@ var getPreviousLaunches = function () {
     }
 }
 
+getNextLaunch();
 getUpcomingLaunches();
 getPreviousLaunches();

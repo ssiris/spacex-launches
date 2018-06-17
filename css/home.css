@@ -30,12 +30,7 @@
 
 }
 
-.index-next-launch-info h3 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.index-next-launch-info h4 {
+.index-next-launch-info p {
   font-size: 1.3em;
   margin-bottom: 40px;
 }
@@ -81,36 +76,61 @@ a.link-all-launches{
 
 .index-launch-facts h1{
   color: #2269FF;
-  font-size: 8em;
-  margin-bottom: 10px;
+  font-size: 3em;
+  margin-bottom: 50px;
   margin-top:30px;
 }
 
 .index-launch-facts span{
-  font-size: 12em;
+  font-size: 6em;
 }
 
 .index-launch-facts p{
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
+.index-launch-facts.bg-lightblack {
+  padding:2em;
+  box-sizing: border-box;
+  margin-bottom:2em;
+}
+
+@media (min-width:768px) {
+  .index-launch-facts h1{
+    font-size: 6em;
+  }
+
+  .index-launch-facts span{
+    font-size: 12em;
+  }
+
+  .index-launch-facts p{
+    font-size: 2em;
+  }
+}
 
 /*  Rockets Launch   */
 
 
 .index-rockets h1 {
   color: #2269FF;
-  font-size: 8em;
+  font-size: 3.5em;
   margin-bottom: 10px;
   margin-top:20px;
+  text-align:left;
+  font-weight: 900;
 }
 
-.index-rockets h2 {
-  font-size: 1.8em;
+.index-rockets h3 {
+  font-size: 1.2em;
 }
 
 .index-rockets {
   padding: 30px;
+}
+
+.index-rockets .page-list span, .index-rockets .page-list {
+  font-size: 22px;
 }
 
 .featured-image-mobile {
@@ -129,6 +149,13 @@ a.link-all-launches{
 }
 
 @media (min-width:768px) {
+
+  .index-rockets h1 {
+    font-size: 6em;
+    text-align: center;
+  }
+
+
   .featured-image-mobile {
     display: none;
   }

@@ -21,7 +21,7 @@ var getPreviousLaunches = function () {
     // EGEN FUNKSJON!!!
     var getLaunches = function (data) {
         let list = document.getElementById('previous-launch-list');
-        data.forEach(launch => {
+        data.reverse().forEach(launch => {
             var date = new Date(launch.launch_date_utc);
             // creating array that contains payload of rocket, in case of multiple payload.
             var payload = [];

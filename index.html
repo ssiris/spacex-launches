@@ -74,10 +74,9 @@
      <div class="col-sm-12 col-md-6">
        <div class="index-next-launch-info bg-lightblack">
           <h1>NEXT LAUNCH</h1>
-          <h2 class="lato-font">Falcon 9 <span> CRS 15</span></h2>
-          <h3>JUNE 28</h3>
-          <h4>6.03 a.m. (1003 GMT)</h4>
-          <a class="main-btn" title="Save the date" href="#"> Save the date </a>
+          <h2 class="lato-font" id="next-launch-rocket"></h2>
+          <p class="date" id="next-launch-date"></p>
+          <div id="next-launch-cta"></div>
        </div>
      </div>
 
@@ -120,26 +119,31 @@
 <section class="container index-container">
   <div class="row">
 
-    <div class="col-sm-12 align-center">
+    <div class="col-sm-12">
       <div class="index-launch-facts">
         <h1 class="align-center">Did you know?</h1>
-        <span class="lato-font"> 61 </span>
-        <p>SpaceX has launched <span>61</span> rockets since 2006</p>
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-6 col-lg-6 align-center">
-      <div class="index-launch-facts">
-        <span class="lato-font"> 18 </span>
-        <p>Succesful launches in 2018</p>
+    <div class="col-sm-12 align-center">
+      <div class="index-launch-facts bg-lightblack">
+        <span class="lato-font" id="total-rockets"></span>
+        <p>rockets launched by SpaceX since 2006</p>
+      </div>
+    </div>
+
+    <div class="col-sm-6 align-center">
+      <div class="index-launch-facts bg-lightblack">
+        <span class="lato-font" id="last-year"></span>
+        <p>rockets launched last year</p>
       </div>
     </div>
 
 
-    <div class="col-sm-12 col-md-6 col-lg-6 align-center">
-      <div class="index-launch-facts">
-        <span class="lato-font"> 21 </span>
-        <p>Lorem ipsum dolor sit amet</p>
+    <div class="col-sm-6 align-center">
+      <div class="index-launch-facts bg-lightblack">
+        <span class="lato-font" id="this-year"></span>
+        <p>rockets launched so far this year</p>
       </div>
     </div>
 
@@ -161,7 +165,7 @@
     <div class="col-sm-12 col-md-12 col-lg-4">
       <div class="index-rockets">
         <ul class="page-list">
-            <li><h2 class="lato-font">FALCON 1</h2></li>
+            <li><h3 class="lato-font">FALCON 1</h3></li>
             <li>First Launch: <span id="oneFirst"></span></li>
             <li>Last Launch: <span id="oneLast"></span></li>
             <li>Total: <span id="oneTotal"></span></li>
@@ -172,7 +176,7 @@
     <div class="col-sm-12 col-md-12 col-lg-4">
       <div class="index-rockets">
         <ul class="page-list">
-          <li><h2 class="lato-font">FALCON 9</h2></li>
+          <li><h3 class="lato-font">FALCON 9</h3></li>
           <li>First Launch: <span id="nineFirst"></span></li>
           <li>Last Launch: <span id="nineLast"></span></li>
           <li>Total: <span id="nineTotal"></span></li>
@@ -183,7 +187,7 @@
     <div class="col-sm-12 col-md-12 col-lg-4">
       <div class="index-rockets">
         <ul class="page-list">
-            <li><h2 class="lato-font">FALCON HEAVY</h2></li>
+            <li><h3 class="lato-font">FALCON HEAVY</h3></li>
             <li>First Launch: <span id="heavyFirst"></span></li>
             <li>Last Launch: <span id="heavyLast"></span></li>
             <li>Total: <span id="heavyTotal"></span></li>

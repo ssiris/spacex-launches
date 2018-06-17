@@ -1,5 +1,15 @@
 .contact-form {
+  font-size: 18px;
+}
 
+.contact-form p {
+  color: lightgray;
+}
+
+.contact-form p span {
+  font-size:18px;
+  font-size:1.3em;
+  color:white;
 }
 input:invalid {
   box-shadow: 0 0 5px 1px red;
@@ -7,4 +17,24 @@ input:invalid {
 
 input:focus:invalid {
   outline: none;
+}
+
+input, textarea, button {
+  width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+button {
+  cursor:pointer;
+  border:none;
+  background-color: #bc2222;
+  color: white;
+  transition: .2s ease;
+  margin-top:10px;
+}
+
+button:hover {
+  background-color: #920909;
 }

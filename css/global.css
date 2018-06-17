@@ -61,8 +61,13 @@ a.main-btn {
   padding: 10px 50px;
   border: 0.4px solid grey;
   border-radius: 20px;
+  transition: 0.2s ease;
 }
 
+.main-btn:hover {
+  color: white;
+  background-color: #920909;
+}
 
 .align-right {
   text-align: right;
@@ -201,5 +206,8 @@ span.hide-mobile{
 .lato-font {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
+}
 
+.next-previous {
+  font-size:22px;
 }

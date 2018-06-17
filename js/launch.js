@@ -2,6 +2,41 @@ var launchParams = window.location.search.substring(1);
 var splitParamsToId = launchParams.split("=");
 var launchId = splitParamsToId[1];
 
+
+var getLastPlannedLaunch = function () {
+    var request = new XMLHttpRequest();
+
+    // Opening a new connecting using GET to request data from API endpoint.
+    request.open('GET', 'https://api.spacexdata.com/v2/launches/upcoming', true);
+
+    request.onload = function () {
+        var data = JSON.parse(this.response);
+        if (request.status >= 200 && request.status < 400) {
+        getLaunches(data);
+        }
+        else {
+            console.log('error');
+        }
+    };
+
+    // Send request
+    request.send();
+
+    // Add next launch link and previous launch link. Check what hightest available flight number is to know when to remove next link
+    var getLaunches = function (data) {
+      var lastPlannedLaunch = data[data.length-1].flight_number;
+      if ((+launchId+1) > lastPlannedLaunch) {
+        console.log("Sorry, no more launches");
+      }
+      else {
+        document.getElementById("next").innerHTML = '<a href="launch.html?id=' + (+launchId+1) + '">Next &rarr;</a>';
+      }
+    }
+    if (+launchId > 1) {
+      document.getElementById("previous").innerHTML = '<a href="launch.html?id=' + (+launchId-1) + '">&larr; Previous</a>';
+    }
+}
+
 var getSingleLaunch = function () {
     var request = new XMLHttpRequest();
     var apiEndpoint = "https://api.spacexdata.com/v2/launches/all?flight_number=" + launchId;
@@ -26,6 +61,7 @@ var getSingleLaunch = function () {
     var getLaunchData = function (data) {
         // Refer to first element in API response as launch - instead of typing data[0] several times.
         var launch = data[0];
+        var today = new Date();
         var date = new Date(launch.launch_date_utc);
 
         // Place data from API into HTML
@@ -48,8 +84,12 @@ var getSingleLaunch = function () {
         siteName.innerHTML = launch.launch_site.site_name_long;
 
         let launchSuccess = document.getElementById('launch-success');
+
         if (launch.launch_success) {
           launchSuccess.innerHTML = "Successful ✅";
+        }
+        else if (date > today) {
+          launchSuccess.innerHTML = "Not launched yet...";
         }
         else {
           launchSuccess.innerHTML = "Not successful ❌";
@@ -81,30 +121,37 @@ var getSingleLaunch = function () {
         }
         launchReuse.innerHTML = reused;
 
-        let flightClub = document.getElementById('flight-club');
-        if(launch.telemetry.flight_club) {
-          flightClub.innerHTML = 'Flight Club: <span><a href="' + launch.telemetry.flight_club + '">Link</a><span>';
+
+        let relatedLinks = document.getElementById('related-links');
+        if(!launch.telemetry.flight_club && !launch.links.video_link && !launch.links.wikipedia) {
+          relatedLinks.outerHTML = "";
         }
         else {
-          flightClub.outerHTML = "";
+          let flightClub = document.getElementById('flight-club');
+          if(launch.telemetry.flight_club) {
+            flightClub.innerHTML = 'Flight Club: <span><a href="' + launch.telemetry.flight_club + '">Link</a><span>';
+          }
+          else {
+            flightClub.outerHTML = "";
+          }
+
+          let videoLink = document.getElementById('youtube-link');
+          if(launch.links.video_link) {
+            videoLink.innerHTML = 'YouTube: <span><a href="' + launch.links.video_link + '">Link</a><span>';
+          }
+          else {
+            videoLink.outerHTML = "";
+          }
+
+          let wikiLink = document.getElementById('wiki-link');
+          if(launch.links.wikipedia) {
+            wikiLink.innerHTML = 'Wikipedia: <span><a href="' + launch.links.wikipedia + '">Link</a><span>';
+          }
+          else {
+            wikiLink.outerHTML = "";
+          }
         }
 
-
-        let videoLink = document.getElementById('youtube-link');
-        if(launch.links.video_link) {
-          videoLink.innerHTML = 'YouTube: <span><a href="' + launch.links.video_link + '">Link</a><span>';
-        }
-        else {
-          videoLink.outerHTML = "";
-        }
-
-        let wikiLink = document.getElementById('wiki-link');
-        if(launch.links.wikipedia) {
-          wikiLink.innerHTML = 'Wikipedia: <span><a href="' + launch.links.wikipedia + '">Link</a><span>';
-        }
-        else {
-          wikiLink.outerHTML = "";
-        }
 
 
         let patch = document.getElementById('mission-patch');
@@ -119,4 +166,6 @@ var getSingleLaunch = function () {
     }
 }
 
+
 getSingleLaunch();
+getLastPlannedLaunch();
